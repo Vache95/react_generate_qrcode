@@ -2,13 +2,16 @@ import React, { useContext } from 'react'
 import { InputContext } from '../App'
 
 const InputFeild = () => {
+
     const {inputValue,setInputValue} = useContext(InputContext)
+
     const handleOnChange = (e) => {
         setInputValue({
             ...inputValue,
             url:e.target.value
         })
     }
+    
   return (
     <div>
         <label className='font-semibold text-md'>

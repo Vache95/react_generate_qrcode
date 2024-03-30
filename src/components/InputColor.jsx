@@ -6,15 +6,18 @@ const InputColor = () => {
     const [color, setColor] = useState('#054080')
     const [displayColorPicker,setDisplayColorPicker] = useState(false)
     const {inputValue,setInputValue} = useContext(InputContext)
+
+    const handleChange = (color) =>  setColor(color.hex)
+
     useEffect(() => {
       setInputValue({
         ...inputValue,
         color:color
       })
     },[color])
-   const handleChange = (color) => {
-      setColor(color.hex)
-   }
+
+   
+
   return (
     <div>
         <label

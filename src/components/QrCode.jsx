@@ -1,19 +1,16 @@
-import React, { useCallback, useContext } from 'react'
+import React, {useContext } from 'react'
 import { InputContext } from '../App'
 import { saveAs } from 'file-saver'
 
 const QrCode = () => {
     const {response,isLoading,error} = useContext(InputContext)
   
-
-    const downLoadImg = () => {
-        saveAs(response,'qrCode.png')
-    }
+    const downLoadImg = () => saveAs(response,'qrCode.png')
     
+
     if(isLoading){
        return(
         <div className='animate-pulse flex flex-col items-center justify-center px-10 gap-3'>
-            <div className='h-32 w-full bg-gray-300'></div>
             <div className='h-32 w-full bg-gray-300'></div>
         </div>
        )
