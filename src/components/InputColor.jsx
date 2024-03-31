@@ -14,7 +14,7 @@ const InputColor = () => {
         ...inputValue,
         color:color
       })
-    },[color])
+    },[color,inputValue,setInputValue])
 
    
 
